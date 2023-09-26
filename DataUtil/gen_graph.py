@@ -60,9 +60,9 @@ def updateValueBounds(file, filepath):
     fMax = df.max().max()
     fMin = df.min().min()
 
-    # if (fparts[0] == 'totalPreyHuntedCount'):
-    #     fMax = min(50, fMax)
-    #     #print(fparts, 'Fmax ', fMax, 'Fmin ', fMin)
+    if (fparts[0] == 'totalPreyHuntedCount'):
+        fMax = min(50, fMax)
+        #print(fparts, 'Fmax ', fMax, 'Fmin ', fMin)
 
     currMax = bounds[fparts[0]][1]
     currMin = bounds[fparts[0]][0]
