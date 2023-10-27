@@ -174,7 +174,8 @@ def createPlot(data, plotDest, bounds, statID = '', drawSD = False):
     
     sdLabeled = False
     for profile in profiles:
-        line = plt.plot(data[profile]['Average'], linewidth = 1.5, label = profileNames[profile], alpha = 0.8)
+        avg = data[profile].mean(numeric_only=True, axis=1)
+        line = plt.plot(avg, linewidth = 1.5, label = profileNames[profile], alpha = 0.8)
         
         #Collect data for SD and draw it
         if drawSD:

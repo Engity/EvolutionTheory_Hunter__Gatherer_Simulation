@@ -4,7 +4,7 @@
  * @author Toan Nguyen 
  */
 class Minimap {
-    constructor(game, ctx = null, totalWidth = 1000, totalHeight = 1000) {
+    constructor(game, ctx = null, totalWidth = 900, totalHeight = 900) {
         Object.assign(this, { game, ctx, totalWidth, totalHeight });
         this.resize(totalWidth, totalHeight);
         if (ctx != null) {
@@ -371,7 +371,7 @@ class Minimap {
  */
 const drawMinimap = (minimap = PopulationManager.MINIMAP, minimapElementID = 'minimap', container = 'minimapContainters', 
         style = 'border: 1px solid black;',
-        width = 1000, height = 1000,
+        width = 900, height = 900,
     ) => {
     let canvas = document.createElement('canvas');
 

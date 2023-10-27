@@ -43,7 +43,7 @@ class GameEngine {
 
         document.getElementById("loadProfile").addEventListener("click", () => {
             let profile = profileList[document.getElementById("profileOption").value];
-            loadProfile(profile);
+            loadProfile(profile, document.getElementById("profileOption").value);
         });
 
         document.getElementById("db_download_data").addEventListener("click", () => {

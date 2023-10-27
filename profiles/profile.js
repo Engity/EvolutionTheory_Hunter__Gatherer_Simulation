@@ -1,7 +1,7 @@
-const loadProfile = (profile) => {
+const loadProfile = (profile, profileName) => {
     let oldParams = params;
     let oldHTML = document.getElementsByTagName('html')[0].innerHTML;
-
+    document.title = profileName;
     document.getElementById("save_to_db").checked = true;
     params.SAVE_TO_DB = true;
 

@@ -377,7 +377,7 @@ class Genome {
                     }
                     else {//scales the weight
                         let s_up = 0.25;
-                        let s_down = 1 - 1/(1+s_up);
+                        let s_down = 0.2;
                         node.mValue += (randomInt(2) === 1) ? 
                                                 (s_up * node.mValue * Math.abs(randomFloatUniform(-1, 1))) : 
                                                 (-s_down * node.mValue * Math.abs(randomFloatUniform(-1, 1)));
