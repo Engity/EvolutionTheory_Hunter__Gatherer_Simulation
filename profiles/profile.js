@@ -1,7 +1,7 @@
-const loadProfile = (profile) => {
+const loadProfile = (profile, profileName) => {
     let oldParams = params;
     let oldHTML = document.getElementsByTagName('html')[0].innerHTML;
-
+    document.title = profileName;
     document.getElementById("save_to_db").checked = true;
     params.SAVE_TO_DB = true;
 
@@ -395,12 +395,12 @@ const GradualConsumption_TicksConsume25 = {
     ...ControlProfile_GradualConsumption_Off_FHI_Off,
     DB_COLLECTION: {
         HTMLElementID: 'db_collection',
-        value: "GradualConsumption_Ticks_Consume_25"
+        value: "GradualConsumption_Ticks_Consume_25_2"
     },
 
     GENOME_DB_COLLECTION: {
         HTMLElementID: 'genome_db_collection',
-        value: "GradualConsumption_TicksConsume_25_Genome"
+        value: "GradualConsumption_TicksConsume_25_Genome_2"
     },
 
     GRADUAL_CONSUMPTION: {
@@ -438,12 +438,12 @@ const GradualConsumption_TicksConsume50 = {
     ...ControlProfile_GradualConsumption_Off_FHI_Off,
     DB_COLLECTION: {
         HTMLElementID: 'db_collection',
-        value: "GradualConsumption_Ticks_Consume_50"
+        value: "GradualConsumption_Ticks_Consume_50_2"
     },
 
     GENOME_DB_COLLECTION: {
         HTMLElementID: 'genome_db_collection',
-        value: "GradualConsumption_TicksConsume_50_Genome"
+        value: "GradualConsumption_TicksConsume_50_Genome_2"
     },
 
     GRADUAL_CONSUMPTION: {
