@@ -1,4 +1,4 @@
-# **Simulation Evolve Hunting and Foraging**
+# **Simulation to Evolve Hunting and Foraging Behaviors in Artificial Life Agents**
 ## **Description**
 - The simulation cultivates evolutionary robotics with the capacity to function as both prey and predator performing complex tasks like hunting and foraging food.
 - Featuring highly adaptable environmental settings like vision rays, fitness evaluation, agent spawning mechanisms,
