@@ -3,6 +3,7 @@
  * (c) 2014-2022 Guillermo Rauch
  * Released under the MIT License.
  */
+
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
   typeof define === 'function' && define.amd ? define(factory) :
@@ -4225,7 +4226,6 @@
     return io.socket(parsed.path, opts);
   } // so that "lookup" can be used both as a function (e.g. `io(...)`) and as a
   // namespace (e.g. `io.connect(...)`), for backward compatibility
-
 
   _extends(lookup, {
     Manager: Manager,

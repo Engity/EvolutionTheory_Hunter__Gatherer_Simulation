@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>NEAT Hunting and Fogaring Simulation</title>
-    <script type="text/javascript" src="http://73.225.31.4:8888/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.1/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script type="text/javascript" src="./util.js"></script>
     <script type="text/javascript" src="./data/genometracker.js"></script>
@@ -44,6 +44,64 @@
 </head>
 
 <body>
+
+<script>
+    /*
+    // Connect to the server
+    //var socket = io.connect('http://73.225.31.4:8888');
+
+    // socket.on('connect', function() {
+    //     console.log('Connected to the server');
+    // });
+
+    // socket.on('disconnect', function() {
+    //     console.log('Disconnected from the server');
+    // });
+
+    // let dbdata = {};
+    //         dbdata.params = params;
+    //         let consumptionData = this.foodTracker.getConsumptionData();
+    //         consumptionData = consumptionData.slice(0, consumptionData.length - 1);
+    //         dbdata.consumption = consumptionData;
+    //         agentTrackerAttributesToCollect.forEach((attribute) => {
+    //             let newCollection = this.agentTracker.getAgentTrackerAttributesAsList(attribute);
+    //             newCollection = newCollection.slice(0, newCollection.length - 1);
+    //             dbdata[attribute] = newCollection;
+    //         });
+
+    // var data = {
+    //     db: "tcss435",
+    //     collection: "blue3",
+    //     data: dbdata
+    // };
+
+    // // Use socket.emit to send the message to the server
+    // socket.emit('insert', data);
+
+    // Find and retrieve the data
+    //socket.on("find", function (array) {
+    //    if (array.length > 0) parseData(array);
+    //    else console.log("Empty data.");
+    //});
+    socket.on('disconnect', function() {
+        console.log('Disconnected from the server');
+    });
+
+    //socket.emit("find",
+    //    {
+    //        db: "tcss435",
+    //        collection: "blue3",
+            //query: {"params.food": "none", "params.plantStrategy":
+    //            "none" }});
+
+        }
+    };
+
+    // Use socket.emit to send the message to the server
+    socket.emit('insert', data);
+    */
+
+</script>
     <!-- <canvas id="gameWorld" width="800" height="800" style="background: white; border: 1px solid black" tabindex="0"></canvas> -->
     <div style="display:flex; flex-wrap: inherit;">
         <div id="carouselCanvasIndicators" class="carousel carousel-dark" style="margin: auto;" data-bs-ride="carousel">
@@ -151,10 +209,10 @@
             <input type="checkbox" id="save_to_db">
             <br>
             <label for="db"> Database Name: </label>
-            <input type="text" id="db" value="testDB">
+            <input type="text" id="db" value="tcss435">
             <br>
             <label for="db_collection"> Collection Name: </label>
-            <input type="text" id="db_collection" value="NEATtests">
+            <input type="text" id="db_collection" value="blue3">
 
             <br>
             <label for="gen_to_save"> Generation to Save to DB: </label>
@@ -315,6 +373,17 @@
 
             <div>
                 Vision Cone Angle (degrees): <input type="text" id="agent_vision_angle" value="180">
+            </div>
+            <br>
+
+            [New Setting Added]
+            <br>
+            <div>
+                <input type="checkbox" id="MODVISION"> Dimorphic Vision On Prey
+            </div>
+
+            <div>
+                <input type="checkbox" id="PREDGOOD"> Swap Dimorphism on Predator
             </div>
             <br>
         </div>

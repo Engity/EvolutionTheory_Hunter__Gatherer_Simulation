@@ -180,6 +180,10 @@ class PopulationManager {
     resetSim() {
         console.log("restarting sim...");
         params.AGENT_VISION_IS_CONE = document.getElementById("agent_vision_is_cone").checked;
+        //New added params
+        params.MODVISION = document.getElementById('MODVISION').checked;
+        params.PREDGOOD = document.getElementById('PREDGOOD').checked;
+
         PopulationManager.SPECIES_ID = 0;
         PopulationManager.GEN_NUM = 0;
         PopulationManager.SPECIES_CREATED = 0;
@@ -279,7 +283,12 @@ class PopulationManager {
         params.MIRROR_ROLES = document.getElementById("mirror_roles").checked;
         params.DISPLAY_MINIMAP = document.getElementById("display_minimap").checked;
         params.BUSH_SIGHT_MODE = document.getElementById("bush_sight_mode");
-        
+
+        // new params added
+        params.MODVISION = document.getElementById('MODVISION').checked;
+        params.PREDGOOD = document.getElementById('PREDGOOD').checked;
+
+
         if (params.GRADUAL_CONSUMPTION){
             document.getElementById("GRADUAL_CONSUMPTION_RESPAWN").disabled = false;
           

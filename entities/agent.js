@@ -771,10 +771,27 @@ class Agent {
     }
 
     coneVision(input) {
-        const rays = params.AGENT_VISION_RAYS - 1;
-        const angle = params.AGENT_VISION_ANGLE * Math.PI / 180;
+        var rays = params.AGENT_VISION_RAYS -1; //modify so that predator score increases this
+        var angle = params.AGENT_VISION_ANGLE * Math.PI / 180;// modify so that predator score decrease this
+        var dimorphVision = params.MODVISION;
+        var swapDimorph = params.PREDGOOD;
+        // if heierarchy = 0, this agent is prey, else predator (predator = 1)
+        
+        if(dimorphVision === true){
+             if (this.foodHierarchyIndex !== 0 && swapDimorph === true) {// Predator get good vision
+                rays = rays +5;
+                 angle = params.AGENT_VISION_ANGLE * Math.PI / 140;
+             } else if(this.foodHierarchyIndex === 0 && swapDimorph === false) { //Prey gets good vision
+                 rays = rays +5;
+                 angle = params.AGENT_VISION_ANGLE * Math.PI / 140;
+             } else {
+                 angle = params.AGENT_VISION_ANGLE * Math.PI / 220
+             }
+         }
+       
+        
         const angleBetw = angle / rays;
-
+        
         let currAngle = this.heading - angle / 2;
 
         let eyes = this.getEyePos();

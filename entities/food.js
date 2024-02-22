@@ -532,10 +532,11 @@ class FoodPod {
      * @returns the randomly generated position
      */
     genFoodPos() {
-        let randomDist = randomInt(this.radius);
+        let minDist = 300; // Set minimum distance from the center
+        let randomDist = minDist + randomInt(this.radius - minDist);
         let randomAngle = randomInt(360) * Math.PI / 180;
         let x = this.centerX + randomDist * Math.cos(randomAngle);
         let y = this.centerY + randomDist * Math.sin(randomAngle);
         return { x, y };
-    };
+    }
 };
